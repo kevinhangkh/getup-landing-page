@@ -1,0 +1,251 @@
+
+#presentation-section {
+    display: grid;
+    grid-template-columns: 3fr auto;
+    background-color: rgb(236, 221, 221);
+    padding-left: 10rem;
+    height: 500px;
+}
+
+#text-div {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    justify-content: center;
+    margin: 3rem;
+    width: 500px;
+}
+
+#text-div #title1 {
+    font-family: jakarta;
+    font-size: 22px;
+    color: var(--brown);
+    font-weight: 500;
+}
+
+#text-div #title2 {
+    font-family: jakarta-display;
+    font-size: 44px;
+    /* font-weight: 600; */
+    margin-bottom: .9rem;
+}
+
+#text-div #text {
+    font-family: jakarta;
+    font-size: 22px;
+    margin-bottom: 2rem;
+}
+
+#image {
+    -webkit-transform: translate(0,19px) rotateX(6deg) rotateY(-9deg) rotateZ(0);
+    /* width: auto; */
+    display: block;
+    /* height: 40%; */
+    /* position: absolute;
+    right: 0px; */
+    /* float: right; */
+    /* max-height: 50% !important;
+    width: auto;
+    z-index: 1; */
+}
+
+.button-div {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.button-div .try-for-free {
+    font-family: jakarta;
+    font-size: 15px;
+    font-weight: 600;
+    -webkit-transition: all .35s ease;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+}
+
+.button-div .try-for-free#top-button {
+    color: white;
+    background-color: var(--brown);
+}
+
+.button-div .try-for-free#top-button:hover {
+    background-color: var(--browner);
+}
+
+.button-div .book-a-demo {
+    font-family: jakarta;
+    font-size: 15px;
+    font-weight: 600;
+
+    display: flex;
+    flex-direction: row;
+    gap: 7px;    
+    align-items: center;
+    justify-content: center;
+}
+
+.button-div .book-a-demo#top-link {
+    color: var(--red);
+}
+
+.button-div .book-a-demo:hover {
+    text-decoration: none;
+}
+
+#arrow-right{
+    font-size: small;
+}
+
+.button-div .book-a-demo:hover #arrow-right {
+    transform: translateX(5px);
+    transition-duration: 200ms;
+}
+
+.companies {
+    padding: 3rem 0;
+    position: relative;
+    z-index: 100;
+    background-color: white;
+}
+
+.feature {
+    position: relative;
+    z-index: 100;
+    background-color: white;
+    /* display: grid;
+    grid-template-columns: 50% 50%;
+    place-items: center; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+
+    padding: 0 300px 5rem 300px;
+}
+
+.feature-picture {
+    border-radius: 20px;
+    border: 0;
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.feature-text .title {
+    font-family: jakarta-display;
+    font-size: 38px;
+    /* font-weight: 700; */
+    line-height: 42px;
+}
+
+.feature-text .text {
+    font-family: jakarta-light;
+    color: var(--greyer);
+}
+
+.feature-text .list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-family: jakarta-light;
+
+    padding: 1rem;
+    border: 1px lightgray solid;
+    border-radius: 5px;
+}
+
+.feature-text .list .list-bullet {
+    margin-right: 10px;
+    color: var(--red);
+}
+
+#try-it-yourself {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--red);
+
+    padding: 5rem 0;
+}
+
+#try-it-yourself #title {
+    color: white;
+    font-family: jakarta-display;
+}
+
+#try-it-yourself #text {
+    color: white;
+    font-family: jakarta;
+}
+
+.button-div .try-for-free#bottom-button {
+    color: var(--red);
+    background-color: white;
+}
+
+.button-div .try-for-free#bottom-button:hover {
+    background-color: rgb(223, 223, 223);
+}
+
+.button-div .book-a-demo#bottom-link {
+    color: white;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    background-color: var(--brown);
+
+    padding: 5rem 300px 5rem 300px;
+}
+
+footer #top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: jakarta;
+}
+
+footer #top .left {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    color: white;
+}
+
+footer #top .left a{
+    color: white;
+    text-decoration: none;
+}
+
+footer #top .right {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+footer #top .right a{
+    font-size: large;
+    color: lightgray;
+    -webkit-transition: all .35s ease;
+}
+
+footer #top .right a:hover{
+    color: white;
+}
+
+footer #bottom {
+    font-family: jakarta-light;
+    color: lightgray;
+    font-size: small;
+}

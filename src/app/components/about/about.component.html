@@ -1,0 +1,58 @@
+<div id="presentation-section">
+    <div id="text-div">
+        <span id="title">Our mission is to help you be on time</span>
+        <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Amet possimus consectetur atque architecto eos consequuntur vero culpa quo asperiores, nesciunt ipsum temporibus error. 
+            Voluptatum minima minus, reprehenderit officia ad doloremque!
+        </p>
+    </div>
+    <!-- <img id="image" src="../../../assets/alarm.png" alt=""> -->
+</div>
+<div id="top-companies">
+    <div class="company" *ngFor="let c of topCompanies">
+        <img src="{{ c.src }}" alt="{{ c.src }}">
+        <span id="s1">{{ c.title }}</span>
+        <span id="s2">{{ c.text }}</span>
+    </div>
+</div>
+<div id="ceo">
+    <div id="ceo-quote">
+        <p id="quote">&ldquo;</p>
+        <p id="quote-text">Sleep is my drug, my bed is the dealer and my alarm clock is the police</p>
+        <p id="quote-name">
+            ROB MEYER CEO & FOUNDER
+        </p>
+    </div>
+    <img id="ceo-picture" src="../../../assets/sleepy_ceo.jpg" alt="">
+</div>
+<div id="impact">
+    <div id="text">
+        <span id="title">Impact</span>
+        <h2 id="headline">We save our customers sleep, bedsheets and insomnia</h2>
+    </div>
+    <div id="stats-wrapper">
+        <div id="stats">
+            <div class="stat" *ngFor="let s of stats">
+                <div class="number">{{ s.number }}</div>
+                <div class="unit">{{ s.text }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="team">
+    <div id="text">
+        <span id="title">Our team</span>
+        <h2 id="headline">Helping snorers with their breathing</h2>
+    </div>
+    <div id="peeps">
+        peeps
+    </div>
+    <div id="join-us">
+        <span id="text">Interested in joining the team?</span>
+        <a id="careers" href="">
+            <span id="text">View Careers</span>
+            <i id="arrow-right" class="fas fa-arrow-right fa-fw"></i>
+        </a>
+    </div>
+</div>

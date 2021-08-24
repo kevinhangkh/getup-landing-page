@@ -1,0 +1,266 @@
+#presentation-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url("../../../assets/desk.jpg");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    /* background-color: #ffb0b9; */
+    padding-left: 10rem;
+    /* height: 500px; */
+}
+
+#text-div {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    justify-content: center;
+    margin: 3rem;
+    width: 500px;
+}
+
+#text-div #title {
+    font-family: jakarta-display;
+    font-size: 44px;
+    color: var(--brown);
+    font-weight: 500;
+}
+
+#text-div .text {
+    font-family: jakarta;
+    font-size: 22px;
+    margin-bottom: 2rem;
+}
+
+#image {
+    max-height: 500px;
+    width: auto;
+    /* background-size: contain; */
+}
+
+#top-companies {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 3rem;
+}
+
+.company {
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+    justify-content: center;
+    align-items: center;
+}
+
+#top-companies img {
+    height: 150px;
+    width: auto;
+    margin-bottom: 20px;
+}
+
+#top-companies span {
+    font-family: jakarta;
+    font-size: 20px;
+}
+
+#s2 {
+    color: var(--red);
+}
+
+#ceo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: jakarta;
+    padding: 3rem 6rem;
+    background-color: #f8f9fa;
+}
+
+#ceo-quote {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+#quote {
+    font-family: bestschool;
+    font-size: 100px;
+    color: var(--red);
+}
+
+#quote-text {
+    font-family: jakarta-display;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+#quote-name {
+    font-family: jakarta;
+    font-size: 20px;
+    color: var(--red);
+}
+
+/* #ceo-picture {
+    /* width: 
+}*/
+
+#ceo-picture {
+    filter: grayscale(100%);
+    border-radius: 20px;
+    object-fit: contain;
+    max-width: 400px;
+    height: auto;
+}
+
+#impact {
+    background-color: #eff2f7;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 4rem;
+}
+
+#impact #text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#impact #text #title {
+    font-family: jakarta;
+    color: var(--brown);
+    font-size: 20px;
+}
+
+#impact #text #headline {
+    font-family: jakarta-display;
+    /* color: var(--brown); */
+    font-size: 35px;
+}
+
+#stats-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px 10px;
+    border: black 1px solid; */
+}
+
+#stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    /* max-width: max-content; */
+}
+
+.stat {
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 350px;
+    height: 90px;
+    border: 1px solid lightgray;
+    border-radius: 50px;
+    padding: 18px 36px;
+    -webkit-transition: all .35s ease;
+}
+
+.stat:hover {
+    background: #ecedee;
+}
+
+.number {
+    white-space: nowrap;
+    /* overflow: hidden; */
+    font-family: jakarta-display;
+    font-size: 32px;
+    color: var(--brown);
+    line-height: 38px;
+}
+
+.unit {
+    font-family: jakarta;
+    font-size: 16px;
+    text-align: right;
+    /* color: var(--brown); */
+}
+
+#team {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    background-color: #f8f9fa;
+}
+
+#team #text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#team #text #title {
+    font-family: jakarta;
+    color: var(--brown);
+    font-size: 20px;
+}
+
+#team #text #headline {
+    font-family: jakarta-display;
+    font-size: 40px;
+}
+
+#team #peeps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#team #join-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#team #join-us #text {
+    font-family: jakarta-light;
+    /* font-size: 15px; */
+}
+
+#team #join-us #careers {
+    font-family: jakarta;
+    font-weight: 600;
+    color: var(--red);
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+}
+
+#arrow-right {
+    font-size: small;
+}
+
+#team #join-us #careers:hover #arrow-right {
+    transform: translateX(5px);
+    transition-duration: 200ms;
+}
