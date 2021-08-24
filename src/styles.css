@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@font-face {
+    font-family: bestschool;
+    src: url('assets/fonts/BestSchool.otf');
+}
+
+@font-face {
+    font-family: eversinceny;
+    src: url('assets/fonts/KGEverSinceNewYork.ttf');
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('assets/fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: jakarta;
+    src: url('assets/fonts/PlusJakartaText-Regular.otf');
+}
+
+@font-face {
+    font-family: jakarta-light;
+    src: url('assets/fonts/PlusJakartaText-Light.otf');
+}
+
+@font-face {
+    font-family: jakarta-display;
+    src: url('assets/fonts/PlusJakartaDisplay-Bold.otf');
+}
+
+.red {
+    color: #e63a3a;
+}
+
+:root {
+    --red: #e63a3a;
+    --redder: #ce3333;
+    --brown: #826252;
+    --browner: #705648;
+    --grey: rgb(104, 104, 104);
+    --greyer: rgb(85, 85, 85);
+}
