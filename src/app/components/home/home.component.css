@@ -1,10 +1,10 @@
-
 #presentation-section {
     display: grid;
     grid-template-columns: 3fr auto;
     background-color: rgb(236, 221, 221);
     padding-left: 10rem;
     height: 500px;
+    margin-top: 5rem;
 }
 
 #text-div {
@@ -214,6 +214,7 @@ footer #top {
     flex-direction: row;
     justify-content: space-between;
     font-family: jakarta;
+    margin-bottom: 1rem;
 }
 
 footer #top .left {

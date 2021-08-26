@@ -21,6 +21,12 @@ export class SharedDataService {
     {number: "200%", text: "Snoring noise reduction"},
   ];
 
+  private employees: Employee[] = [
+    {pic: "../../assets/about/sleepy_ceo_sm.png", name: "Rob Bed", position: "Chief Executive Officer"},
+    {pic: "../../assets/about/sleepy_woman_sm.png", name: "Sarah Zzz", position: "Chief Operating Officer"},
+    {pic: "../../assets/about/sleeping_guy_sm.png", name: "Jim Rem", position: "Chief Technology Officer"}
+  ];
+
   constructor() { }
 
   get topComps(): Observable<Company> {
@@ -29,6 +35,10 @@ export class SharedDataService {
 
   get stat(): Observable<Stat> {
     return from(this.stats);
+  }
+
+  get employee(): Observable<Employee> {
+    return from(this.employees);
   }
 }
 
@@ -41,4 +51,10 @@ export interface Company {
 export interface Stat {
   number: String;
   text: String;
+}
+
+export interface Employee {
+  pic: String;
+  name: String;
+  position: String;
 }

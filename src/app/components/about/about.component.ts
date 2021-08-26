@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Company, SharedDataService, Stat } from 'src/app/services/shared-data.service';
+import { Company, Employee, SharedDataService, Stat } from 'src/app/services/shared-data.service';
 
 @Component({
   selector: 'app-about',
@@ -12,6 +12,7 @@ export class AboutComponent implements OnInit {
   subs: Subscription[] = [];
   topCompanies: Company[] = [];
   stats: Stat[] = [];
+  employees: Employee[] = [];
 
   constructor(private sharedData: SharedDataService) { 
     
@@ -27,6 +28,11 @@ export class AboutComponent implements OnInit {
     this.subs.push(this.sharedData.stat.subscribe(
       (stat) => this.stats.push(stat)
     ));
+
+    this.subs.push(this.sharedData.employee.subscribe(
+      (employee) => this.employees.push(employee)
+    ));
+
   }
 
 }

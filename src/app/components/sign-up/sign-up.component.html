@@ -1,0 +1,67 @@
+
+<div id="container">
+    <div id="left">
+        <h1>Something interesting</h1>
+        <div>1 pound fish</div>
+        
+    </div>
+    <div id="right">
+        <div id="signup">
+            
+            <h1 id="title">Start a free month trial</h1>
+            <p>Let's create your account in 3 easy steps.</p>
+            <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+                <div id="email-input" class="input">
+                    <label>E-mail</label>
+                    <input type="email" formControlName="email">
+                    <span class="red" *ngIf="form.get('email').touched && form.get('email').errors?.required">The email field can't be empty</span>
+                </div>
+                <div id="password-input" class="input">
+                    <div>
+                        <label>Create password</label>
+                        <span id="show"><i class="far fa-eye fa-fw"></i>Show</span>
+                    </div>
+                    <input type="password" formControlName="password">
+                    <span id="password-tip" *ngIf="form.get('password').untouched">Use at least 8 characters, one lower case, one upper case, one special character and one number</span>
+                    <div id="password-validators" *ngIf="form.get('password').touched">
+                        <div>
+                            <i class="far fa-fw" [ngClass]="form.get('password').errors?.required ? 'fa-times-circle red' : 'fa-check-circle green'"></i>
+                            The password field can't be empty
+                        </div>
+                        <div>
+                            <i class="far fa-fw" [ngClass]="form.get('password').errors?.required || form.get('password').errors?.minlength ? 'fa-times-circle red' : 'fa-check-circle green'"></i>
+                            The password field must have at least 8 characters
+                        </div>
+                        <div>
+                            <i class="far fa-fw" [ngClass]="form.get('password').errors?.required || form.controls['password'].hasError('hasNumber') ? 'fa-times-circle red' : 'fa-check-circle green'"></i>
+                            The password needs at least one number
+                        </div>
+                        <div>
+                            <i class="far fa-fw" [ngClass]="form.get('password').errors?.required || form.get('password').errors?.hasCapitalCase ? 'fa-times-circle red' : 'fa-check-circle green'"></i>
+                            The password needs at least one upper case letter
+                        </div>
+                        <div>
+                            <i class="far fa-fw" [ngClass]="form.get('password').errors?.required || form.get('password').errors?.hasSmallCase ? 'fa-times-circle red' : 'fa-check-circle green'"></i>
+                            The password needs at least one lower case letter
+                        </div>
+                        <div>
+                            <i class="far fa-fw" [ngClass]="form.get('password').errors?.required || form.get('password').errors?.hasSpecialCharacters ? 'fa-times-circle red' : 'fa-check-circle green'"></i>
+                            The password needs at least one special character
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <i class="far fa-square fa-fw"></i>
+                    <span>I agree to&nbsp;<a href="">Getup's Terms of Service</a>&nbsp;and&nbsp;<a href="">Privacy Policy</a></span>
+                </div>
+
+                <button type="submit" [disabled]="form.invalid">Sign Up</button>
+            </form>
+        </div>
+        
+        <div id="already">
+            Already have an account?
+            <a href="">Log in</a>
+        </div>
+    </div>
+</div>

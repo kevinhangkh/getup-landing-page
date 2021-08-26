@@ -21,10 +21,10 @@
         <p id="quote">&ldquo;</p>
         <p id="quote-text">Sleep is my drug, my bed is the dealer and my alarm clock is the police</p>
         <p id="quote-name">
-            ROB MEYER CEO & FOUNDER
+            ROB BED CEO & FOUNDER
         </p>
     </div>
-    <img id="ceo-picture" src="../../../assets/sleepy_ceo.jpg" alt="">
+    <img id="ceo-picture" src="../../../assets/about/sleepy_ceo.jpg" alt="">
 </div>
 <div id="impact">
     <div id="text">
@@ -45,8 +45,21 @@
         <span id="title">Our team</span>
         <h2 id="headline">Helping snorers with their breathing</h2>
     </div>
-    <div id="peeps">
-        peeps
+    <div id="employees">
+        <div id="employee" *ngFor="let e of employees">
+            <div class="picture">
+                <img src="{{ e.pic }}" alt="{{ e.pic }}">
+            </div>
+            <div class="text">
+                <span class="name">{{ e.name }}</span>
+                <span class="position">{{ e.position }}</span>
+            </div>
+            <div class="links">
+                <a href=""><i class="fab fa-linkedin fa-fw"></i></a>
+                <a href=""><i class="fas fa-hamburger fa-fw"></i></a>
+                <a href=""><i class="fas fa-bed fa-fw"></i></a>
+            </div>
+        </div>
     </div>
     <div id="join-us">
         <span id="text">Interested in joining the team?</span>
@@ -56,3 +69,33 @@
         </a>
     </div>
 </div>
+<div id="hq">
+    <img src="../../../assets/about/coruscant_sm.png" alt="">
+    <div id="text">
+        <h2 id="title">Headquartered in Coruscant</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel nobis temporibus eos iure aperiam aliquid distinctio architecto similique deserunt accusantium veniam incidunt rem nihil dignissimos dicta, quo sit est ab!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium nam consequatur impedit laudantium, molestiae maxime cupiditate nobis facilis, tenetur consequuntur tempora commodi quia, culpa veritatis libero dolor aut qui corporis.
+        </p>
+    </div>
+</div>
+<footer>
+    <div id="top">
+        <div class="left">
+            <span>© 2021 Getup. All rights reserved.</span>
+            <a href="">Privacy Policy</a>
+            <a href="">Terms & Conditions</a>
+        </div>
+        <div class="right">
+            <a href=""><i class="fas fa-hamburger fa-fw"></i></a>
+            <a href=""><i class="fab fa-facebook-f fa-fw"></i></a>
+            <a href=""><i class="fab fa-linkedin fa-fw"></i></a>
+        </div>
+    </div>
+    <p id="bottom">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi exercitationem molestiae nesciunt necessitatibus vel iure, sequi atque similique optio repellat cum in labore fugit id dolor et eaque quod harum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sed id ducimus aliquam atque distinctio eius iure error blanditiis possimus quibusdam explicabo veritatis voluptas nihil cupiditate consequuntur, autem reprehenderit dolor!
+    </p>
+</footer>
