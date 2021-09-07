@@ -27,6 +27,18 @@ export class SharedDataService {
     {pic: "../../assets/about/sleeping_guy_sm.png", name: "Jim Rem", position: "Chief Technology Officer"}
   ];
 
+  private review: Review[] = [
+    {rating: 5, comment: "Had a fantastic experience at the store today. The team were very knowledgeable and provided all the information we needed to make a decision. Omar was an awesome salesman and I strongly encourage everyone to go here instead of buying shotguns online (better prices and you can try before you buy!)", 
+    employee: {pic: "../../assets/about/sleepy_ceo_sm.png", name: "Jimmy McNulty", position: "Detective"}},
+    {rating: 4, comment: "Mr. Burns provided great service, confirming availability, matching online price, and organizing 2 day delivery in very short notice. Very helpful during a stressful situation",
+    employee: {pic: "../../assets/about/sleepy_woman3_sm.png", name: "Lisa Simpson", position: "Straight A student"}},
+    {rating: 3, comment: "Gus was extremely helpful and confirmed everything many times. Was a great experience from the customer service aspect. Getting fried chicken and adjustable drinks delivered next week!", 
+    employee: {pic: "../../assets/about/sleepy_woman_sm.png", name: "Marie Schrader", position: "Housewife"}},
+    {rating: 2, comment: "A mattress store with neat displays but with very limited product information on display. Super aggressive sales urged immediately purchase and refused to provide a name card for future reference. Overall, not a comfortable shopping experience and will not visit again.", 
+    employee: {pic: "../../assets/about/sleeping_guy_sm.png", name: "Logan Paul", position: "Trash influencer"}},
+    {rating: 1, comment: "Awful, don't waste your time with those clowns!", employee: {pic: "../../assets/about/sleepy_woman3_sm.png", name: "Tilly Green", position: "Day sleeper"}},
+  ];
+
   constructor() { }
 
   get topComps(): Observable<Company> {
@@ -39,6 +51,12 @@ export class SharedDataService {
 
   get employee(): Observable<Employee> {
     return from(this.employees);
+  }
+
+  get rev() : Observable<Review> {
+    return new Observable(obs => {
+      obs.next(this.review[Math.floor(Math.random() * this.review.length)]);
+    })
   }
 }
 
@@ -57,4 +75,10 @@ export interface Employee {
   pic: String;
   name: String;
   position: String;
+}
+
+export interface Review {
+  rating: number;
+  comment: String;
+  employee: Employee;
 }

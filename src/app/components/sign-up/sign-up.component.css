@@ -33,9 +33,59 @@
     /* flex-grow: 1; */
     height: 100vh;
     /* width: 40vw; */
-    /* background-color: #f8f9fa; */
-    background-color: indianred;
+    background-color: #f8f9fa;
+    /* background-color: indianred; */
     
+}
+
+#review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 1rem;
+
+    font-size: 14px;
+    font-family: inter;
+
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+#review #rating {
+    color: rgb(255, 217, 0);
+}
+
+#review #comment {
+    font-family: inter-bold;
+}
+
+#profile {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+}
+
+#profile-left {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+}
+
+#profile-left img {
+    height: 80px;
+    width: auto;
+    margin-left: -2%;
+}
+
+#profile-right #name {
+}
+
+#profile-right #position {
+    color: #495057;
 }
 
 #right {
@@ -55,8 +105,9 @@
     font-family: inter-bold;
     font-size: 32px;
     color: #495057;
-    font-weight: 700;
+    font-weight: 800;
     margin-bottom: 1rem;
+    letter-spacing: -1px;
 }
 
 #signup p {
@@ -82,6 +133,9 @@
     height: 40px;
     border-radius: 5px;
     border: 1px solid rgb(193, 203, 222);
+
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .input input:hover {
@@ -93,6 +147,10 @@
     border-color: var(--brown);
 }
 
+#email-input {
+    margin-bottom: 15px;
+}
+
 #email-input label {
     margin-bottom: 5px;
 }
@@ -100,6 +158,12 @@
 /* #email-input input {
     max-width: 300px;
 } */
+
+input[type="password"]#password-box {
+    letter-spacing: 1px;
+    font-size: smaller;
+    font-weight: 300;
+}
 
 #password-input {
     margin-bottom: 1rem;
@@ -111,5 +175,45 @@
 
 #password-input #password-tip {
     font-size: 12px;
+    color: #495057;
+}
+
+.show {
+    color: #495057;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#agreement {
+    margin-bottom: 1rem;
+    font-family: inter;
+    font-size: 14px;
+    color: #495057;
+    cursor: pointer;
+}
+
+#agreement i {
+    margin-right: 5px;
+    font-size: large;
+}
+
+#submit-btn {
+    font-family: inter;
+    font-size: 14px;
+    -webkit-transition: all .35s ease;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+    color: white;
+    background-color: var(--red);
+}
+
+#submit-btn:disabled {
+    background-color: lightgray;
+}
+
+#already {
+    font-family: inter;
+    font-size: 14px;
     color: #495057;
 }

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { EmailValidator, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
+import { Review, SharedDataService } from 'src/app/services/shared-data.service';
 import { CustomValidators } from 'src/app/validators/custom-validators';
 
 @Component({
@@ -7,12 +9,16 @@ import { CustomValidators } from 'src/app/validators/custom-validators';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent implements OnInit, OnDestroy {
 
   form: FormGroup;
+  showPwd: boolean = false;
+  agree: boolean = false;
   // passwordFocusOut: boolean = true;
+  review: Review;
+  subs: Subscription[] = [];
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private sd: SharedDataService) { }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group(
@@ -35,10 +41,30 @@ export class SignUpComponent implements OnInit {
           )]
       }
     );
+
+    this.subs.push(this.sd.rev.subscribe(
+      (val) => this.review = val,
+      (err) => console.error(err)
+    ));
+    
+  }
+
+  ngOnDestroy(): void {
+    this.subs.forEach(s => s.unsubscribe());
   }
 
   onSubmit(value: any): void {
     console.log(value);
+  }
+
+  onShowPwd(): void {
+    this.showPwd = !this.showPwd;
+    console.log(this.showPwd);
+    
+  }
+
+  onCheckAgree(): void {
+    this.agree = !this.agree;
   }
 
   // togglePasswordFocusOut(): void {

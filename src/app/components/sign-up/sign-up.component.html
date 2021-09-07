@@ -1,8 +1,25 @@
 
 <div id="container">
     <div id="left">
-        <h1>Something interesting</h1>
-        <div>1 pound fish</div>
+        <div id="review">
+            <div id="rating">
+                <span *ngFor="let star of [].constructor(review.rating)">
+                    <i class="fas fa-star fa-fw"></i>
+                </span>
+            </div>
+            <div id="comment">
+                {{ review.comment }}    
+            </div>
+            <div id="profile">
+                <div id="profile-left">
+                    <img [src]="review.employee.pic" alt="">
+                </div>
+                <div id="profile-right">
+                    <div id="name">{{ review.employee.name }}</div>
+                    <div id="position">{{ review.employee.position }}</div>
+                </div>
+            </div>
+        </div>
         
     </div>
     <div id="right">
@@ -19,11 +36,12 @@
                 <div id="password-input" class="input">
                     <div>
                         <label>Create password</label>
-                        <span id="show"><i class="far fa-eye fa-fw"></i>Show</span>
+                        <span class="show" *ngIf="!showPwd" (click)="onShowPwd()"><i class="far fa-eye fa-fw"></i>Show</span>
+                        <span class="show" *ngIf="showPwd" (click)="onShowPwd()"><i class="far fa-eye-slash fa-fw"></i>Hide</span>
                     </div>
-                    <input type="password" formControlName="password">
-                    <span id="password-tip" *ngIf="form.get('password').untouched">Use at least 8 characters, one lower case, one upper case, one special character and one number</span>
-                    <div id="password-validators" *ngIf="form.get('password').touched">
+                    <input id="password-box" [type]="showPwd ? 'text' : 'password'" formControlName="password">
+                    <span id="password-tip" >Use at least 8 characters, one lower case, one upper case, one special character and one number</span>
+                    <div id="password-validators" *ngIf="form.get('password').touched && form.invalid">
                         <div>
                             <i class="far fa-fw" [ngClass]="form.get('password').errors?.required ? 'fa-times-circle red' : 'fa-check-circle green'"></i>
                             The password field can't be empty
@@ -50,18 +68,18 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <i class="far fa-square fa-fw"></i>
-                    <span>I agree to&nbsp;<a href="">Getup's Terms of Service</a>&nbsp;and&nbsp;<a href="">Privacy Policy</a></span>
+                <div id="agreement" (click)="onCheckAgree()">
+                    <i [ngClass]="agree ? 'fa-check-square' : 'fa-square'" class="far fa-fw"></i>
+                    <span>I agree to&nbsp;<a href="javascript:void(0)">Getup's Terms of Service</a>&nbsp;and&nbsp;<a href="javascript:void(0)">Privacy Policy</a></span>
                 </div>
 
-                <button type="submit" [disabled]="form.invalid">Sign Up</button>
+                <button id="submit-btn" type="submit" [disabled]="form.invalid || !agree">Sign Up</button>
             </form>
         </div>
         
         <div id="already">
             Already have an account?
-            <a href="">Log in</a>
+            <a href="javascript:void(0)">Log in</a>
         </div>
     </div>
 </div>
