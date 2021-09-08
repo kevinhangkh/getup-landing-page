@@ -55,6 +55,8 @@ export class SignUpComponent implements OnInit, OnDestroy {
 
   onSubmit(value: any): void {
     console.log(value);
+    alert(JSON.stringify(value));
+    this.form.reset();
   }
 
   onShowPwd(): void {
