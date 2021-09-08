@@ -21,6 +21,17 @@ export class SignUpComponent implements OnInit, OnDestroy {
   constructor(private formBuilder: FormBuilder, private sd: SharedDataService) { }
 
   ngOnInit(): void {
+
+    this.initForm();
+
+    this.subs.push(this.sd.rev.subscribe(
+      (val) => this.review = val,
+      (err) => console.error(err)
+    ));
+    
+  }
+
+  private initForm(): void {
     this.form = this.formBuilder.group(
       {
         email: [null, Validators.compose([
@@ -41,12 +52,6 @@ export class SignUpComponent implements OnInit, OnDestroy {
           )]
       }
     );
-
-    this.subs.push(this.sd.rev.subscribe(
-      (val) => this.review = val,
-      (err) => console.error(err)
-    ));
-    
   }
 
   ngOnDestroy(): void {
