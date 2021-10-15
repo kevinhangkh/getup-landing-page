@@ -8,3 +8,6 @@ A fake company landing page made with :heart:
 
 Check the demo here: [https://getup-landing-page.vercel.app/](https://getup-landing-page.vercel.app/)
 
+## Disclaimer :warning: 
+
+This is just a front end project
